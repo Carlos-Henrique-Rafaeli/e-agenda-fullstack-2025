@@ -275,6 +275,7 @@ namespace eAgenda.Infraestrutura.Orm.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    UsuarioId = table.Column<Guid>(type: "uuid", nullable: false),
                     Titulo = table.Column<string>(type: "text", nullable: false),
                     Concluido = table.Column<bool>(type: "boolean", nullable: false),
                     TarefaId = table.Column<Guid>(type: "uuid", nullable: false)

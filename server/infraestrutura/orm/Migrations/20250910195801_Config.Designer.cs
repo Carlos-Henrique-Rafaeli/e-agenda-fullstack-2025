@@ -12,7 +12,7 @@ using eAgenda.Infraestrutura.Orm.Compartilhado;
 namespace eAgenda.Infraestrutura.Orm.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250910190529_Config")]
+    [Migration("20250910195801_Config")]
     partial class Config
     {
         /// <inheritdoc />
@@ -381,6 +381,9 @@ namespace eAgenda.Infraestrutura.Orm.Migrations
                     b.Property<string>("Titulo")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<Guid>("UsuarioId")
+                        .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
